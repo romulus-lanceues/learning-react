@@ -44,14 +44,14 @@ Some of the concepts covered (and continuously expanding):
 
 ---
 
-# Progress & Updates
+## Progress & Updates
 
 I’ll be updating this repository regularly as I learn new concepts and improve existing code.
 Earlier commits may not reflect best practices — and that’s intentional. It shows growth.
 
 ---
 
-# Feedback & Suggestions
+## Feedback & Suggestions
 
 If you stumble upon this repo and have suggestions, tips, or improvements, feel free to open an issue or share feedback. Learning is better together.
 
