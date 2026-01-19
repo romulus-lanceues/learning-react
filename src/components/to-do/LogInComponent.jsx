@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "./security/AuthContext";
 
 function LogInComponent() {
   const [username, setUsername] = useState("glizzy");
@@ -11,6 +12,8 @@ function LogInComponent() {
   // useNavigate hook to programmatically navigate
   const navigate = useNavigate();
 
+  const authContext = useAuth();
+
   function handleUsernameChange(event) {
     setUsername(event.target.value);
   }
@@ -19,12 +22,13 @@ function LogInComponent() {
     setPassword(event.target.value);
   }
 
-  function handleSubmit(username) {
-    if (username === "glizzy" && password === "1234") {
+  function handleSubmit() {
+    if (authContext.logIn(username, password)) {
       setIsSuccessfull(true);
-      //use the navigate hook to navigate to welcome page
+      setIsFailed(false);
       navigate(`/welcome/${username}`);
     } else {
+      setIsSuccessfull(false);
       setIsFailed(true);
     }
   }

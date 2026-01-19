@@ -1,11 +1,4 @@
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  useNavigate,
-  useParams,
-  Link,
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import "./ToDoApp.css";
 import LogoutComponent from "./LogoutComponent.jsx";
 import HeaderComponent from "./HeaderComponent.jsx";
@@ -14,6 +7,14 @@ import ErrorComponent from "./ErrorComponent.jsx";
 import WelcomeComponent from "./WelcomeComponent.jsx";
 import LogInComponent from "./LogInComponent.jsx";
 import AuthProvider from "./security/AuthContext.jsx";
+import { useAuth } from "./security/AuthContext.jsx";
+
+function AuthenticatedRoute({ children }) {
+  const authContext = useAuth();
+  if (authContext.isAuthenticated) return children;
+
+  return <Navigate to="/login" />;
+}
 
 export default function TodoApp() {
   return (
@@ -25,11 +26,33 @@ export default function TodoApp() {
             <Route path="/" element={<LogInComponent />} />
             <Route path="/login" element={<LogInComponent />} />
 
-            <Route path="/welcome/:username" element={<WelcomeComponent />} />
+            {/* Authenticated routes to protect certain components */}
 
-            <Route path="/todos" element={<ToDoListComponent />} />
-            <Route path="/logout" element={<LogoutComponent />} />
+            <Route
+              path="/welcome/:username"
+              element={
+                <AuthenticatedRoute>
+                  <WelcomeComponent />
+                </AuthenticatedRoute>
+              }
+            />
 
+            <Route
+              path="/todos"
+              element={
+                <AuthenticatedRoute>
+                  <ToDoListComponent />
+                </AuthenticatedRoute>
+              }
+            />
+            <Route
+              path="/logout"
+              element={
+                <AuthenticatedRoute>
+                  <LogoutComponent />
+                </AuthenticatedRoute>
+              }
+            />
             {/* No matching path error message */}
             <Route path="*" element={<ErrorComponent />} />
           </Routes>
