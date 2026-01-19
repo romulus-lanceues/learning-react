@@ -1,16 +1,74 @@
-# React + Vite
+# 🚀 React Learning Journey
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome! 👋  
+This repository documents my journey of learning **React**. It serves as a personal learning space and a public record of my progress as I explore modern frontend development.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Purpose of This Repository
 
-## React Compiler
+The goal of this repo is to:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 📚 Learn React fundamentals and best practices
+- 🧠 Practice concepts through small experiments and features
+- 🔁 Track my progress over time
+- 🌍 Share what I’ve learned with others who may be on the same path
 
-## Expanding the ESLint configuration
+This is a **learning-focused repository**, so you may see refactors, experiments, and evolving patterns as my understanding improves.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack
+
+- **React**
+- **Vite** (for fast development & builds)
+- **JavaScript / JSX**
+- **CSS** (or other styling approaches as I explore)
+
+---
+
+## 🧩 Topics I’m Exploring
+
+Some of the concepts covered (and continuously expanding):
+
+- Components & JSX
+- Props and State
+- Event handling
+- Conditional rendering
+- Lists & keys
+- Hooks (`useState`, `useEffect`, etc.)
+- Project structure & best practices
+- Tooling with Vite
+
+> This list will grow as I progress 🚀
+
+---
+
+# Progress & Updates
+
+I’ll be updating this repository regularly as I learn new concepts and improve existing code.
+Earlier commits may not reflect best practices — and that’s intentional. It shows growth.
+
+---
+
+# Feedback & Suggestions
+
+If you stumble upon this repo and have suggestions, tips, or improvements, feel free to open an issue or share feedback. Learning is better together.
+
+---
+
+## 🏗️ How to Run the Project
+
+```bash
+# install dependencies
+npm install
+
+# start development server
+npm run dev
+
+```
+
+# About Me
+
+I'm an aspiring Java Backend Developer that's passionate with developing software.
+I’m actively learning React and modern frontend development, focusing on writing clean, understandable, and maintainable code.
