@@ -8,6 +8,7 @@ import WelcomeComponent from "./WelcomeComponent.jsx";
 import LogInComponent from "./LogInComponent.jsx";
 import AuthProvider from "./security/AuthContext.jsx";
 import { useAuth } from "./security/AuthContext.jsx";
+import TodoComponent from "./TodoComponent.jsx";
 
 function AuthenticatedRoute({ children }) {
   const authContext = useAuth();
@@ -45,6 +46,15 @@ export default function TodoApp() {
                 </AuthenticatedRoute>
               }
             />
+
+            <Route
+              path="/todo/:id"
+              element={
+                <AuthenticatedRoute>
+                  <TodoComponent />
+                </AuthenticatedRoute>
+              }
+            />
             <Route
               path="/logout"
               element={
@@ -53,6 +63,7 @@ export default function TodoApp() {
                 </AuthenticatedRoute>
               }
             />
+
             {/* No matching path error message */}
             <Route path="*" element={<ErrorComponent />} />
           </Routes>

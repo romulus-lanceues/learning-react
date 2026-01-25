@@ -11,11 +11,13 @@ export const useAuth = () => useContext(AuthContext);
 //Share the context with other components
 export default function AuthProvider({ children }) {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [username, setUsername] = useState(null);
 
   //Defining a function to log in
   function logIn(username, password) {
     if (username === "glizzy" && password === "1234") {
       setIsAuthenticated(true);
+      setUsername(username);
       return true;
     } else {
       setIsAuthenticated(false);
@@ -30,7 +32,7 @@ export default function AuthProvider({ children }) {
   //Provide the context value to other components
   return (
     //Passing down the state and functions as context value
-    <AuthContext.Provider value={{ isAuthenticated, logIn, logOut }}>
+    <AuthContext.Provider value={{ isAuthenticated, logIn, logOut, username }}>
       {children}
     </AuthContext.Provider>
   );
