@@ -1,24 +1,24 @@
-# 🚀 React Learning Journey
+# React Learning Journey
 
-Welcome! 👋  
+Welcome!   
 This repository documents my journey of learning **React**. It serves as a personal learning space and a public record of my progress as I explore modern frontend development.
 
 ---
 
-## 📌 Purpose of This Repository
+##  Purpose of This Repository
 
 The goal of this repo is to:
 
-- 📚 Learn React fundamentals and best practices
-- 🧠 Practice concepts through small experiments and features
-- 🔁 Track my progress over time
-- 🌍 Share what I’ve learned with others who may be on the same path
+- Learn React fundamentals and best practices
+- Practice concepts through small experiments and features
+- Track my progress over time
+- Share what I’ve learned with others who may be on the same path
 
 This is a **learning-focused repository**, so you may see refactors, experiments, and evolving patterns as my understanding improves.
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **React**
 - **Vite** (for fast development & builds)
@@ -27,7 +27,7 @@ This is a **learning-focused repository**, so you may see refactors, experiments
 
 ---
 
-## 🧩 Topics I’m Exploring
+##  Topics I’m Exploring
 
 Some of the concepts covered (and continuously expanding):
 
@@ -40,7 +40,7 @@ Some of the concepts covered (and continuously expanding):
 - Project structure & best practices
 - Tooling with Vite
 
-> This list will grow as I progress 🚀
+> This list will grow as I progress 
 
 ---
 
@@ -57,7 +57,7 @@ If you stumble upon this repo and have suggestions, tips, or improvements, feel 
 
 ---
 
-## 🏗️ How to Run the Project
+## How to Run the Project
 
 ```bash
 # install dependencies
